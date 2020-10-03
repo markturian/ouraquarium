@@ -1,12 +1,17 @@
 <html>
   <head>
-    <title>OA, Our Aquarium</title>
+    <title class="notranslate">OA, Our Aquarium</title>
     <link id="favicon" rel="shortcut icon" type="image/png" href="faviconGeneral.ico" />
   </head>
 <body style="margin:0">
     <div id="loading"><br/><br/>LOADING...</div>
-    <script type="module" src="main_ok.js"></script>
-    <input id="file-input" type="file" name="name" style="display: none;" />
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({ pageLanguage: 'en', includedLanguages: 'en,pt,de,zh-CN,ko,it,ja,ru,fr,es', layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL }, 'google_translate_element');
+}
+</script>
+  <script type="module" src="main_ok.js"></script>
+  <input id="file-input" type="file" name="name" style="display: none;" />
 </body>
 <style type="text/css">
 
@@ -25,7 +30,7 @@
   position: absolute;
   padding: 1px 5px 2px 5px;
   bottom: -1.3em;
-  left: 100%;
+  left: -55%;
   white-space: nowrap;
   box-shadow: 1px 1px 3px #222222;
   opacity: 0;
@@ -66,6 +71,103 @@
   text-align: center;
   font-size: 24px;
   visibility: hidden;
+}
+
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  font-size: 150%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip.focus, .tooltip:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext:hover {
+  visibility: hidden;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 </style>
 </html>
